@@ -380,6 +380,15 @@
           "href": "http://localhost:3000/books/27"
         }
       ]
+    },
+    {
+      "title": "shady",
+      "author": "shady",
+      "isbn": "gggg",
+      "releaseDate": "hhhhh",
+      "createdAt": "2025-03-30T22:03:28.758Z",
+      "updatedAt": "2025-03-30T22:03:28.758Z",
+      "id": 28
     }
   ],
   "households": [
