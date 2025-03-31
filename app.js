@@ -42,7 +42,7 @@ function isAuthorized(req) {
 }
 
 const bookRouteNeedsAuth = (req) =>
-  req.url.match(/books/) && (req.method === "DELETE" || req.method === "PUT");
+  req.url.match(/books/) && (req.method === "DELETE" || req.method === "PUT" || req.method === "PATCH");
 
 const userRouteNeedsAuth = (req) =>
   req.url.match(/users/) && req.method === "DELETE";
@@ -137,9 +137,18 @@ server.put("/books/:id", (req, res) => {
 // Partially update a book (PATCH)
 server.patch("/books/:id", (req, res) => {
   const db = router.db;
-  const book = db.get("books").find({ id: parseInt(req.params.id) }).assign(req.body).write();
-  res.status(200).json(book);
+  const book = db.get("books").find({ id: parseInt(req.params.id) }).value();
+  
+  if (!book) {
+    return res.status(404).json({ error: "Book not found" });
+  }
+  
+  // Partially update the book
+  const updatedBook = db.get("books").find({ id: parseInt(req.params.id) }).assign(req.body).write();
+  
+  res.status(200).json(updatedBook);
 });
+
 
 // Delete a book
 server.delete("/books/:id", (req, res) => {

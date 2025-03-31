@@ -369,10 +369,10 @@
     {
       "title": "The Brazilian Jiu Jitsu Globe Trotter",
       "author": "Christian Gaugart",
-      "isbn": "1479104523",
+      "isbn": "1479104524",
       "publicationDate": "2012-11-13",
       "createdAt": "2021-06-27T19:53:44.686Z",
-      "updatedAt": "2021-06-27T19:53:44.686Z",
+      "updatedAt": "2025-03-31T00:50:12.307Z",
       "id": 27,
       "links": [
         {
@@ -380,15 +380,6 @@
           "href": "http://localhost:3000/books/27"
         }
       ]
-    },
-    {
-      "title": "shady",
-      "author": "shady",
-      "isbn": "gggg",
-      "releaseDate": "hhhhh",
-      "createdAt": "2025-03-30T22:03:28.758Z",
-      "updatedAt": "2025-03-30T22:03:28.758Z",
-      "id": 28
     }
   ],
   "households": [
